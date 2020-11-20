@@ -1,0 +1,187 @@
+#heroImage {
+    width: 101vw;
+    height: 100vh;
+    background-image: url("../images/bg3.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 90%;
+}
+
+
+#heroImage table {
+    font-family: 'Lato', sans-serif;
+    font-size: 2vw;
+    margin-left: 10%;
+    padding: 0% 10% 0% 10%;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.1),
+                -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+table i {
+    font-family: 'Lato', sans-serif;
+    font-size: 5vw;
+    padding: 1vh 2vw;
+    margin: 1vh 1vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.1),
+                -10px 20px 5px rgba(0,0,0,0.05);
+    opacity: 100;
+}
+
+
+h1 {
+    margin: 1.2%;
+    padding: 2% 10% 0% 10%;
+    font-family: 'Lato', sans-serif;
+    font-size: 8vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.1),
+                -10px 20px 5px rgba(0,0,0,0.05);
+
+}
+
+h2 {
+    margin: 1.2%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    padding-left: 15%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8),
+                4px 4px 4px rgba(0, 0, 0, 0.8),
+                6px 6px 6px rgba(0,0,0,0.5),
+                -10px 20px 5px rgba(0,0,0,0.05);
+
+}
+
+#linkclick i {
+    padding: 1.2%;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.5);
+    font-size: 4vh;
+    color: #f1f1f1;
+}
+
+.capital {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 8vw;
+    color: #959BB6;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.1),
+                -10px 20px 5px rgba(0,0,0,0.05);
+    animation-name: capitalAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes capitalAnimation {
+    0%   {color: #0C2A42;}
+    25%  {color: #21595C;}
+    50%  {color: #429C84;}
+    100% {color:#97D7AE;}
+  }
+
+
+
+
+  /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    font-family: 'Lato', sans-serif;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+/* portrait card flip */
+.flip-container {
+    margin-left: 3%;
+    perspective: 1000;
+    display: inline-block;
+    margin-top: -15%;
+}
+.flip-container:hover .card {
+    transform: rotateY(180deg);
+}
+.card, .front, .back {
+    width: 100px;
+    height: 145px;
+    margin-top: 15%;
+}
+.card {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+    
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+.front {
+    z-index: 1;
+    transform: rotateY(180deg);
+    background: url("../images/selfimage.jpg") no-repeat center;
+    background-size: cover;
+    border-radius: 20px;
+}
+.back {
+    z-index: 2; /* back side, placed above front */
+    transform: rotateY(0deg);
+    background: url("../images/portrait-solid.svg") no-repeat;
+}
+
+
+@media screen and (max-height: 450px) {
+    table i {font-size: 10rem;}
+}
