@@ -51,6 +51,7 @@ h2 {
     font-family: 'Lato', sans-serif;
     font-size: 1.2vw;
     padding-left: 15%;
+    font-weight: 400;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8),
                 4px 4px 4px rgba(0, 0, 0, 0.8),
@@ -184,4 +185,34 @@ h2 {
 
 @media screen and (max-height: 450px) {
     table i {font-size: 10rem;}
+}
+
+/* about page css */
+
+.heading {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 5px;
+    padding: 5px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.1),
+                -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.info {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 5px 0px 5px 20px;
+    padding: 5px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8),
+                10px 20px 5px rgba(0,0,0,0.1),
+                -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.aboutMe {
+    width: 600px;
 }
